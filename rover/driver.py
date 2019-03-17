@@ -1,3 +1,5 @@
+import time
+import random
 from rover.motor import Motor
 from rover import config
 
@@ -25,6 +27,12 @@ class Driver:
         self.right_motor.speed = value[1]
 
 
-    def soft_stop():
+    def soft_stop(self):
         self.left_motor.soft_stop()
         self.right_motor.soft_stop()
+
+
+    def test(self, num_repetitions=16):
+        for i in range(num_repetitions):
+            self.speed = random.random(), random.random()
+            time.sleep(1)
