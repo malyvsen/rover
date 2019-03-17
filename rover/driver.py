@@ -1,4 +1,3 @@
-import numpy as np
 from rover.motor import Motor
 from rover import config
 
@@ -17,7 +16,7 @@ class Driver:
 
     @property
     def speed(self):
-        return np.array((self.left_motor.speed, self.right_motor.speed), dtype=np.float32)
+        return (self.left_motor.speed, self.right_motor.speed)
 
 
     @speed.setter
