@@ -34,5 +34,6 @@ class Driver:
 
     def test(self, num_repetitions=16):
         for i in range(num_repetitions):
-            self.speed = random.random(), random.random()
+            self.speed = random.random() * 2 - 1, random.random() * 2 - 1
             time.sleep(1)
+        self.speed = 0, 0
